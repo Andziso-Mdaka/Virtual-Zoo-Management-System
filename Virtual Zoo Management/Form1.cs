@@ -22,9 +22,17 @@ namespace Virtual_Zoo_Management
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            Lion lion = new Lion("Lion", 5);
-            Parrot parrot = new Parrot("Parrot", 2);
-            Turtle turtle = new Turtle("Turtle", 10);
+            Lion lion = new Lion("Simba", 5);
+            Parrot parrot = new Parrot("Polly", 2);
+            Turtle turtle = new Turtle("Bulbasuar", 10);
+
+            animals.Add(lion);
+            animals.Add(parrot);
+            animals.Add(turtle);
+            foreach (var animal in animals)
+            {
+                animalsListBox.Items.Add($"{animal.Name} ({animal.GetType().Name}), Age: {animal.Age}");
+            }
 
 
             ageNumericUpDown.Value = 0;

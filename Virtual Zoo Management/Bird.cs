@@ -18,22 +18,22 @@ namespace Virtual_Zoo_Management
 
         public void Feed(string food)
         {
-            Console.WriteLine($"{Name} is eating {food}.");
+            MessageBox.Show($"{Name} is eating {food}.");
         }
 
         public override void Sleep()
         {
-            Console.WriteLine($"the {Name} is sleeping in the shade.");
+            MessageBox.Show($"the {Name} is sleeping in the tree");
         }
 
         public override void Speak()
         {
-            Console.WriteLine($"the {Name} roars");
+            MessageBox.Show($"the {Name} tweets");
         }
 
         public override void Move()
         {
-            Console.WriteLine($"{Name} walks majestically.");
+            MessageBox.Show($"{Name} is flyng");
         }
     }
 }

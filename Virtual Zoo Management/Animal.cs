@@ -35,28 +35,28 @@ namespace Virtual_Zoo_Management
 
         public virtual void Eat()
         {
-            Console.WriteLine($"{Name} is eating.");
+            MessageBox.Show($"{Name} is eating.");
         }
 
         public virtual void Eat(string food)
         {
-            Console.WriteLine($"{Name} is eating {food}.");
+            MessageBox.Show($"{Name} is eating {food}.");
         }
 
 
         public virtual void Sleep()
         {
-            Console.WriteLine($"{Name} is sleeping.");
+            MessageBox.Show($"{Name} is sleeping.");
         }
 
         public virtual void Speak()
         {
-            Console.WriteLine($"{Name} makes this sound");
+            MessageBox.Show($"{Name} makes this sound");
         }
 
         public virtual void Move()
         {
-            Console.WriteLine($"{Name} is moving.");
+            MessageBox.Show($"{Name} is moving.");
         }
     }
 

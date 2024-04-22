@@ -45,7 +45,7 @@
             // 
             // InvokeBehaviorButton
             // 
-            InvokeBehaviorButton.Location = new Point(764, 283);
+            InvokeBehaviorButton.Location = new Point(796, 274);
             InvokeBehaviorButton.Name = "InvokeBehaviorButton";
             InvokeBehaviorButton.Size = new Size(163, 29);
             InvokeBehaviorButton.TabIndex = 0;
@@ -80,6 +80,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Location = new Point(71, 184);
             label1.Name = "label1";
             label1.Size = new Size(100, 20);
@@ -89,6 +90,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(71, 248);
             label2.Name = "label2";
             label2.Size = new Size(87, 20);
@@ -98,6 +100,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(71, 137);
             label3.Name = "label3";
             label3.Size = new Size(91, 20);
@@ -128,7 +131,7 @@
             animalsListBox.FormattingEnabled = true;
             animalsListBox.Location = new Point(764, 124);
             animalsListBox.Name = "animalsListBox";
-            animalsListBox.Size = new Size(171, 144);
+            animalsListBox.Size = new Size(233, 144);
             animalsListBox.TabIndex = 9;
             // 
             // label5
