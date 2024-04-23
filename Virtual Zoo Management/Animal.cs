@@ -24,7 +24,7 @@ namespace Virtual_Zoo_Management
         public string Name { get; set; }
         public int Age { get; set; }
 
-
+        //contructor
         public Animal(string name, int age)
         {
             Name = name;
@@ -32,12 +32,13 @@ namespace Virtual_Zoo_Management
 
         }
 
-
+        //Eat method
         public virtual void Eat()
         {
             MessageBox.Show($"{Name} is eating.");
         }
 
+        // Overloaded Eat method
         public virtual void Eat(string food)
         {
             MessageBox.Show($"{Name} is eating {food}.");
@@ -48,12 +49,14 @@ namespace Virtual_Zoo_Management
         {
             MessageBox.Show($"{Name} is sleeping.");
         }
+        // animal sound method
 
         public virtual void Speak()
         {
             MessageBox.Show($"{Name} makes this sound");
         }
 
+        // move animal method
         public virtual void Move()
         {
             MessageBox.Show($"{Name} is moving.");

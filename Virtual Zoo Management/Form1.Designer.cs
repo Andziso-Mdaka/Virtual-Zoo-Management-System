@@ -40,6 +40,7 @@
             animalTypeComboBox = new ComboBox();
             animalsListBox = new ListBox();
             label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)ageNumericUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -144,6 +145,18 @@
             label5.TabIndex = 10;
             label5.Text = "Animals";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FloralWhite;
+            label6.Location = new Point(255, 23);
+            label6.Name = "label6";
+            label6.Size = new Size(620, 29);
+            label6.TabIndex = 11;
+            label6.Text = "Welcome to the Virtual Zoo Management System!";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -151,6 +164,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1062, 483);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(animalsListBox);
             Controls.Add(animalTypeComboBox);
@@ -183,5 +197,6 @@
         private ComboBox animalTypeComboBox;
         private ListBox animalsListBox;
         private Label label5;
+        private Label label6;
     }
 }

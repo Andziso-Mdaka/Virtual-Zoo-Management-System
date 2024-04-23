@@ -9,6 +9,7 @@ namespace Virtual_Zoo_Management
             InitializeComponent();
         }
 
+        // method to update animal list into the ListBox
         private void UpdateAnimalListBox()
         {
             animalsListBox.Items.Clear();
@@ -21,7 +22,7 @@ namespace Virtual_Zoo_Management
       
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // add default animals into the ListBox when the form loads 
             Lion lion = new Lion("Simba", 5);
             Parrot parrot = new Parrot("Polly", 2);
             Turtle turtle = new Turtle("Bulbasuar", 10);
@@ -34,25 +35,25 @@ namespace Virtual_Zoo_Management
                 animalsListBox.Items.Add($"{animal.Name} ({animal.GetType().Name}), Age: {animal.Age}");
             }
 
-
+            
             ageNumericUpDown.Value = 0;
             animalTypeComboBox.SelectedIndex = 0;
 
 
-            MessageBox.Show("Welcome to the Virtual Zoo Management System!");
+          
 
 
         }
 
         private void AddAnimalButton_Click_1(object sender, EventArgs e)
         {
-
+            // recieve user input
             string name = animalNameTextBox.Text;
             int age = (int)ageNumericUpDown.Value;
             string type = animalTypeComboBox.SelectedItem.ToString();
 
             
-
+            // adding the new animal
             Animal animal;
             if (name == "")
             {
@@ -84,6 +85,8 @@ namespace Virtual_Zoo_Management
             
   
         }
+
+        // function to invoke the behaviour of different animals
 
         private void InvokeBehaviorButton_Click_1(object sender, EventArgs e)
         {

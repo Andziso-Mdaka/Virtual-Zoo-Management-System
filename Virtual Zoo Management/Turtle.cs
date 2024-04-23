@@ -13,25 +13,25 @@ namespace Virtual_Zoo_Management
         {
 
         }
-
+        // Feed animals method
         public void Feed(string food)
         {
             MessageBox.Show($"{Name} is eating {food}.");
         }
-
+        // animal sleep method
         public override void Sleep()
         {
-            MessageBox.Show($"the {Name} is sleeping in the shade.");
+            MessageBox.Show($"{Name} is sleeping in the water.");
         }
-
+        //animal sound method
         public override void Speak()
         {
-            MessageBox.Show($"the {Name} roars");
+            MessageBox.Show($"{Name} yells");
         }
-
+        // move animal method
         public override void Move()
         {
-            MessageBox.Show($"{Name} walks majestically.");
+            MessageBox.Show($"{Name} is swimming.");
         }
 
 

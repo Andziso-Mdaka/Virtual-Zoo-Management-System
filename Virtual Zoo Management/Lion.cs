@@ -11,26 +11,28 @@ namespace Virtual_Zoo_Management
     public class Lion : Animal, IFeedable, IMovable
     {
 
+
+
         public Lion(string name, int age) : base(name, age)
         {
 
         }
-
+        // Feed animals method
         public void Feed(string food)
         {
             MessageBox.Show($"{Name} is eating {food}.");
         }
-
+        // animal sleep method
         public override void Sleep()
         {
-            MessageBox.Show($"the {Name} is sleeping in the shade.");
+            MessageBox.Show($"{Name} is sleeping in the shade.");
         }
-
+        //animal sound method
         public override void Speak()
         {
-            MessageBox.Show($"the {Name} roars");
+            MessageBox.Show($"{Name} roars");
         }
-
+        // move animal method
         public override void Move()
         {
             MessageBox.Show($"{Name} walks majestically.");
