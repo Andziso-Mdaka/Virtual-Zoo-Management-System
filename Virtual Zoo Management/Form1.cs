@@ -19,7 +19,7 @@ namespace Virtual_Zoo_Management
             }
         }
 
-      
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // add default animals into the ListBox when the form loads 
@@ -35,12 +35,12 @@ namespace Virtual_Zoo_Management
                 animalsListBox.Items.Add($"{animal.Name} ({animal.GetType().Name}), Age: {animal.Age}");
             }
 
-            
+
             ageNumericUpDown.Value = 0;
             animalTypeComboBox.SelectedIndex = 0;
 
 
-          
+
 
 
         }
@@ -52,7 +52,7 @@ namespace Virtual_Zoo_Management
             int age = (int)ageNumericUpDown.Value;
             string type = animalTypeComboBox.SelectedItem.ToString();
 
-            
+
             // adding the new animal
             Animal animal;
             if (name == "")
@@ -81,9 +81,9 @@ namespace Virtual_Zoo_Management
                 UpdateAnimalListBox();
                 MessageBox.Show($"{name} has been added");
             }
-           
-            
-  
+
+
+
         }
 
         // function to invoke the behaviour of different animals
@@ -99,8 +99,35 @@ namespace Virtual_Zoo_Management
 
             Animal selectedAnimal = animals[animalsListBox.SelectedIndex];
             selectedAnimal.Speak();
-            selectedAnimal.Move();
+          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (animalsListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an animal.");
+                return;
+            }
+
+            Animal selectedAnimal = animals[animalsListBox.SelectedIndex];         
             selectedAnimal.Eat("food");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+                if (animalsListBox.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select an animal.");
+                    return;
+                }
+
+                Animal selectedAnimal = animals[animalsListBox.SelectedIndex];             
+                selectedAnimal.Move();
+               
+            
         }
     }
 }

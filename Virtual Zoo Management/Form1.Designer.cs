@@ -41,16 +41,18 @@
             animalsListBox = new ListBox();
             label5 = new Label();
             label6 = new Label();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)ageNumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // InvokeBehaviorButton
             // 
-            InvokeBehaviorButton.Location = new Point(796, 274);
+            InvokeBehaviorButton.Location = new Point(719, 274);
             InvokeBehaviorButton.Name = "InvokeBehaviorButton";
-            InvokeBehaviorButton.Size = new Size(163, 29);
+            InvokeBehaviorButton.Size = new Size(94, 29);
             InvokeBehaviorButton.TabIndex = 0;
-            InvokeBehaviorButton.Text = "Invoke Behaviour";
+            InvokeBehaviorButton.Text = "Speak";
             InvokeBehaviorButton.UseVisualStyleBackColor = true;
             InvokeBehaviorButton.Click += InvokeBehaviorButton_Click_1;
             // 
@@ -130,9 +132,9 @@
             // animalsListBox
             // 
             animalsListBox.FormattingEnabled = true;
-            animalsListBox.Location = new Point(764, 124);
+            animalsListBox.Location = new Point(719, 124);
             animalsListBox.Name = "animalsListBox";
-            animalsListBox.Size = new Size(233, 144);
+            animalsListBox.Size = new Size(294, 144);
             animalsListBox.TabIndex = 9;
             // 
             // label5
@@ -157,6 +159,26 @@
             label6.TabIndex = 11;
             label6.Text = "Welcome to the Virtual Zoo Management System!";
             // 
+            // button1
+            // 
+            button1.Location = new Point(819, 274);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 12;
+            button1.Text = "Feed";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(919, 274);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 13;
+            button2.Text = "Move";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -164,6 +186,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1062, 483);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(animalsListBox);
@@ -198,5 +222,7 @@
         private ListBox animalsListBox;
         private Label label5;
         private Label label6;
+        private Button button1;
+        private Button button2;
     }
 }
