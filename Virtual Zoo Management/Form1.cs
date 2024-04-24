@@ -35,13 +35,8 @@ namespace Virtual_Zoo_Management
                 animalsListBox.Items.Add($"{animal.Name} ({animal.GetType().Name}), Age: {animal.Age}");
             }
 
-
             ageNumericUpDown.Value = 0;
             animalTypeComboBox.SelectedIndex = 0;
-
-
-
-
 
         }
 
@@ -99,7 +94,7 @@ namespace Virtual_Zoo_Management
 
             Animal selectedAnimal = animals[animalsListBox.SelectedIndex];
             selectedAnimal.Speak();
-          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,22 +106,38 @@ namespace Virtual_Zoo_Management
                 return;
             }
 
-            Animal selectedAnimal = animals[animalsListBox.SelectedIndex];         
+            Animal selectedAnimal = animals[animalsListBox.SelectedIndex];
             selectedAnimal.Eat("food");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+            if (animalsListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an animal.");
+                return;
+            }
+
+            Animal selectedAnimal = animals[animalsListBox.SelectedIndex];
+            selectedAnimal.Move();
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
                 if (animalsListBox.SelectedIndex == -1)
                 {
                     MessageBox.Show("Please select an animal.");
                     return;
                 }
 
-                Animal selectedAnimal = animals[animalsListBox.SelectedIndex];             
-                selectedAnimal.Move();
-               
+                Animal selectedAnimal = animals[animalsListBox.SelectedIndex];
+                animals.Remove(selectedAnimal);
+                UpdateAnimalListBox();
+                MessageBox.Show($"{selectedAnimal.Name} has been removed.");
             
         }
     }

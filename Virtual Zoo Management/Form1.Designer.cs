@@ -43,6 +43,7 @@
             label6 = new Label();
             button1 = new Button();
             button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)ageNumericUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -179,6 +180,16 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(771, 309);
+            button3.Name = "button3";
+            button3.Size = new Size(194, 29);
+            button3.TabIndex = 14;
+            button3.Text = "Remove Animal";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -186,6 +197,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1062, 483);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label6);
@@ -224,5 +236,6 @@
         private Label label6;
         private Button button1;
         private Button button2;
+        private Button button3;
     }
 }
