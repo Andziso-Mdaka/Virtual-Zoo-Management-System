@@ -8,16 +8,15 @@ using System.Xml.Linq;
 namespace Virtual_Zoo_Management
 {
     //animal subclass
-    public class Aquatic : Animal, IFeedable, IMovable
+    public class Fish : Animal, IFeedable, ISwimmable
     {
 
-        public Aquatic(string name, int age) : base(name, age)
-        {
+        public Fish(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet)
+       : base(name, age, type, habitat, diet) { }
+        
 
-        }
-
-        // Feed animals method
-        public void Feed(string food)
+            // Feed animals method
+            public void Feed(string food)
         {
             MessageBox.Show($"{Name} is eating {food}.");
         }
@@ -34,8 +33,7 @@ namespace Virtual_Zoo_Management
             MessageBox.Show($"the {Name} is speaking");
         }
 
-        // move animal method
-        public override void Move()
+        public void Swim()
         {
             MessageBox.Show($"{Name} is swimming");
         }

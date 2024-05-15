@@ -9,7 +9,7 @@ namespace Virtual_Zoo_Management
     public class Turtle : Animal, IFeedable, IMovable
     {
 
-        public Turtle(string name, int age) : base(name, age)
+        public Turtle(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet) : base(name, age, type, habitat, diet)
         {
 
         }

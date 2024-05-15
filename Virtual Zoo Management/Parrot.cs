@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Virtual_Zoo_Management
 {
-    public class Parrot : Animal, IFeedable, IMovable
+    public class Parrot : Animal, IFeedable ,IFlyable
     {
 
-        public Parrot(string name, int age) : base(name, age)
+        public Parrot(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet) : base(name, age, type, habitat, diet)
         {
 
         }
@@ -29,12 +29,10 @@ namespace Virtual_Zoo_Management
             MessageBox.Show($"{Name} tweets");
         }
         // move animal method
-        public override void Move()
+
+        public void Fly()
         {
             MessageBox.Show($"{Name} flies.");
         }
-
-
-
     }
 }

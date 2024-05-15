@@ -11,12 +11,11 @@ namespace Virtual_Zoo_Management
     public class Carnivore : Animal, IFeedable, IMovable
     {
 
-        public Carnivore(string name, int age) : base(name, age)
-        {
-
-        }
-        // Feed animals method
-        public void Feed(string food)
+        public Carnivore(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet)
+       : base(name, age, type, habitat, diet) { }
+        
+            // Feed animals method
+            public void Feed(string food)
         {
             MessageBox.Show($"{Name} is eating {food}.");
         }

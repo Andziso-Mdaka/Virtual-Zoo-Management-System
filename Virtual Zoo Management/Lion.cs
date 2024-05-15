@@ -13,7 +13,7 @@ namespace Virtual_Zoo_Management
 
 
 
-        public Lion(string name, int age) : base(name, age)
+        public Lion(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet) : base(name, age, type, habitat, diet)
         {
 
         }
