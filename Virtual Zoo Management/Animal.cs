@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Virtual_Zoo_Management
 {
@@ -33,22 +34,60 @@ namespace Virtual_Zoo_Management
         void Fly();
     }
 
-    // Custom exception for handling invalid food types
-    public class InvalidFoodException : Exception
+
+    public abstract class Animal
     {
-        public InvalidFoodException(string message) : base(message)
+        private string _name;
+        private int _age;
+        private AnimalType _type;
+        private HabitatType _habitat;
+        private DietInfo _diet;
+
+        public string Name
         {
+            get { return _name; }
+            set { _name = value; }
         }
-    }
 
-    public class Animal
-    {
+        public int Age
+        {
+            get { return _age; }
+            set
+            {
+                try
+                {
+                    if (value <= 0)
+                    {
+                        throw new InvalidAnimalAgeException($"Age cannot be zero or less than zero.");
+                    }
+                    _age = value;
+                }
+                catch (InvalidAnimalAgeException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
 
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public AnimalType Type { get; set; }
-        public HabitatType Habitat { get; set; }
-        public DietInfo Diet { get; set; }
+            }
+        }
+
+
+        public AnimalType Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
+
+        public HabitatType Habitat
+        {
+            get { return _habitat; }
+            set { _habitat = value; }
+        }
+
+        public DietInfo Diet
+        {
+            get { return _diet; }
+            set { _diet = value; }
+        }
 
         // Constructor
         public Animal(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet)
@@ -60,8 +99,6 @@ namespace Virtual_Zoo_Management
             Diet = diet;
         }
 
-
-
         //Eat method
         public virtual void Eat()
         {
@@ -69,36 +106,45 @@ namespace Virtual_Zoo_Management
         }
 
         // Overloaded Eat method
-        public virtual void Eat(string food)
-        {
-            MessageBox.Show($"{Name} is eating {food}.");
-        }
-
+        public abstract void Eat(string food);
+        
 
         public virtual void Sleep()
         {
             MessageBox.Show($"{Name} is sleeping.");
         }
-        // animal sound method
 
-        public virtual void Speak()
-        {
-            MessageBox.Show($"{Name} makes this sound");
-        }
+        // animal sound method
+        public abstract void Speak();
+
 
         // move animal method
-        public virtual void Move()
-        {
-            MessageBox.Show($"{Name} is moving.");
-        }
-
-
+        public abstract void Move();
+       
 
         public struct DietInfo
         {
-            public FoodType FoodType;
-            public string DietaryRequirements;
-            public string FeedingSchedule;
+            private FoodType _foodType;
+            private string _dietaryRequirements;
+            private string _feedingSchedule;
+
+            public FoodType FoodType
+            {
+                get { return _foodType; }
+                set { _foodType = value; }
+            }
+
+            public string DietaryRequirements
+            {
+                get { return _dietaryRequirements; }
+                set { _dietaryRequirements = value; }
+            }
+
+            public string FeedingSchedule
+            {
+                get { return _feedingSchedule; }
+                set { _feedingSchedule = value; }
+            }
 
             public DietInfo(FoodType foodType, string dietaryRequirements, string feedingSchedule)
             {
@@ -120,7 +166,6 @@ namespace Virtual_Zoo_Management
             Parrot,
             Carnivore,
             Turtle
-
         }
 
         public enum FoodType
@@ -140,5 +185,4 @@ namespace Virtual_Zoo_Management
             Tropical
         }
     }
-
 }

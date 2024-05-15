@@ -37,5 +37,10 @@ namespace Virtual_Zoo_Management
         {
             MessageBox.Show($"{Name} walks majestically.");
         }
+
+        public override void Eat(string food)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

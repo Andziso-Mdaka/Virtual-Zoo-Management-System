@@ -16,6 +16,7 @@ namespace Virtual_Zoo_Management
 
             // Fill the foodTypeComboBox with FoodType enum values
             foodTypeComboBox.DataSource = Enum.GetValues(typeof(FoodType));
+
         }
         private bool IsCarnivoreWithVegetationDiet(AnimalType type, FoodType foodType)
         {
@@ -126,6 +127,10 @@ namespace Virtual_Zoo_Management
                         break;
                     case AnimalType.Turtle:
                         animal = new Turtle
+                            (name, age, type, habitat, new DietInfo(foodType, dietaryRequirements, feedingSchedule));
+                        break;
+                    case AnimalType.Carnivore:
+                        animal = new Carnivore
                             (name, age, type, habitat, new DietInfo(foodType, dietaryRequirements, feedingSchedule));
                         break;
                     default:

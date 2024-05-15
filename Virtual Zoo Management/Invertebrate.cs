@@ -24,4 +24,9 @@ public class Invertebrate : Animal, IMovable, IFeedable
     {
         MessageBox.Show($"{Name} is eating leafy algae.");
     }
+
+    public override void Eat(string food)
+    {
+        throw new NotImplementedException();
+    }
 }

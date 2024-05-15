@@ -27,4 +27,9 @@ public class Reptile : Animal, IClimbable
     {
         MessageBox.Show($"{Name} is climbing.");
     }
+
+    public override void Eat(string food)
+    {
+        throw new NotImplementedException();
+    }
 }

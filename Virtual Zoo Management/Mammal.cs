@@ -13,6 +13,11 @@ public class Mammal : Animal, IMovable
         MessageBox.Show($"{Name} is eating.");
     }
 
+    public override void Eat(string food)
+    {
+        throw new NotImplementedException();
+    }
+
     public override void Move()
     {
         MessageBox.Show($"{Name} is walking.");

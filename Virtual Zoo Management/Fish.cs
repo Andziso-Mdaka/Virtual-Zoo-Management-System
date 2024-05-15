@@ -13,12 +13,23 @@ namespace Virtual_Zoo_Management
 
         public Fish(string name, int age, AnimalType type, HabitatType habitat, DietInfo diet)
        : base(name, age, type, habitat, diet) { }
-        
 
-            // Feed animals method
-            public void Feed(string food)
+        public override void Eat(string food)
         {
+            throw new NotImplementedException();
+        }
+
+
+        // Feed animals method
+        public void Feed(string food)
+        {
+            food = "fish food";
             MessageBox.Show($"{Name} is eating {food}.");
+        }
+
+        public override void Move()
+        {
+            throw new NotImplementedException();
         }
 
         // animal sleep method

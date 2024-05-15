@@ -31,4 +31,14 @@ public class Bird : Animal, IFeedable,IFlyable
     {
         MessageBox.Show($"{Name} is flying.");
     }
+
+    public override void Eat(string food)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Move()
+    {
+        throw new NotImplementedException();
+    }
 }

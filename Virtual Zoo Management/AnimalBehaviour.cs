@@ -143,9 +143,10 @@ namespace Virtual_Zoo_Management
                 habitatTextBox.Text = selectedAnimal.Habitat.ToString();
 
                 // Display diet information
-                dietTextBox.Text = "Food Type: " + selectedAnimal.Diet.FoodType + "\n" +
-                    "Dietary Requirements: " + selectedAnimal.Diet.DietaryRequirements + "\n" +
-                    "Feeding Schedule: " + selectedAnimal.Diet.FeedingSchedule;
+                dietTextBox.Text = $"Food Type: {selectedAnimal.Diet.FoodType}\n" +
+                     $"Dietary Requirements: {selectedAnimal.Diet.DietaryRequirements}\n" +
+                     $"Feeding Schedule: {selectedAnimal.Diet.FeedingSchedule}";
+
 
             }
             else

@@ -24,4 +24,14 @@ public class Amphibian : Animal, IClimbable, IFeedable
     {
         MessageBox.Show($"{Name} is eating bugs");
     }
+
+    public override void Eat(string food)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Move()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -34,6 +34,9 @@ namespace Virtual_Zoo_Management
             MessageBox.Show($"{Name} is swimming.");
         }
 
-
+        public override void Eat(string food)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
